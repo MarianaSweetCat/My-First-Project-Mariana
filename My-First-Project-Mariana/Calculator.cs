@@ -100,7 +100,7 @@
                                 
                                 for (int i = 1; i < typedNumbers.Count; i++)
                                 {
-                                    subtraction -= typedNumbers[0];
+                                    subtraction -= typedNumbers[i];
                                 }
                                     Console.WriteLine($"The result of the subtraction is: {subtraction}");
 
