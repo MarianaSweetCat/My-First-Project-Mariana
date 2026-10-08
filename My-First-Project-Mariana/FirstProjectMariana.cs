@@ -70,9 +70,9 @@ try
                                 }
                                 decimal addition = 0;
 
-                                foreach (decimal Number in typedNumbers)
+                                foreach (decimal number in typedNumbers)
                                 {
-                                    addition += Number;
+                                    addition += number;
                                 }
                                 Console.WriteLine($"The result of the addition is: {addition}");
 
@@ -141,9 +141,9 @@ try
                                 }
                                 decimal multiplication = 1;
 
-                                foreach (decimal Number in typedNumbers)
+                                foreach (decimal number in typedNumbers)
                                 {
-                                    multiplication *= Number;
+                                    multiplication *= number;
                                 }
                                 Console.WriteLine($"The result of the multiplication is: {multiplication}");
                             }
@@ -220,27 +220,33 @@ try
                         typedNumbers.Add(actualGrade);
 
                     }
+                    
+                    decimal sumGrades = 0;
+                    
+                    foreach (decimal number in typedNumbers)
+                    {
+                        sumGrades += number;
+                    }
 
-                        decimal sumGrades = 0;
-
-                        foreach (decimal Number in typedNumbers)
-                        {
-                            sumGrades += Number;
-                        }
-
-                        decimal gradePointAverage;
-
-                        gradePointAverage = sumGrades / quantity;
+                    decimal gradePointAverage = sumGrades / quantity;
 
                     Console.WriteLine($"The Grade Point Average of the student is: {gradePointAverage}");
 
-                    if (gradePointAverage >= 70)
+                    if (gradePointAverage >= 90)
                     {
-                        Console.WriteLine("The student passed. Congratulations!");
+                        Console.WriteLine("The student passed. Congratulations! Excellent!");
+                    }
+                    else if (gradePointAverage >= 80)
+                    {
+                        Console.WriteLine("The student passed. Congratulations! Very good!");
+                    }
+                    else if (gradePointAverage >= 70)
+                    {
+                        Console.WriteLine("The student passed. Good job!");
                     }
                     else
                     {
-                        Console.WriteLine("The student did not pass. Sorry.");
+                        Console.WriteLine("The student did not pass. Sorry. Keep trying.");
                     }
 
                 }
@@ -248,7 +254,22 @@ try
 
             case 3:
                 {
-                    running = false;
+                    Console.WriteLine("Are you sure you want to exit the program? (Yes or No)");
+                    string answer = Console.ReadLine()!.ToLower();
+
+                    while (answer != "yes" && answer != "no")
+                    {
+                        Console.WriteLine("Invalid input. Try Again");
+                        answer = Console.ReadLine()!;
+                        answer = answer.ToLower();
+                    }
+
+                    if (answer == "yes")
+                    {
+                        Console.WriteLine("Closing program...");
+                        running = false;
+                    }
+                    
                 }
                 break;
         }
