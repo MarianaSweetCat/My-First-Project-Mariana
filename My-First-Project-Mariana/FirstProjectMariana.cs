@@ -110,7 +110,7 @@ try
                                 {
                                     subtraction -= typedNumbers[i];
                                 }
-                                    Console.WriteLine($"The result of the subtraction is: {subtraction}");
+                                Console.WriteLine($"The result of the subtraction is: {subtraction}");
                             }
                             break;
                         case 3:
@@ -266,7 +266,8 @@ try
 
                     if (answer == "yes")
                     {
-                        Console.WriteLine("Closing program...");
+                        Console.WriteLine("Thank you for using the program! :)\n" +
+                            "The program has ended successfully.");
                         running = false;
                     }
                     
