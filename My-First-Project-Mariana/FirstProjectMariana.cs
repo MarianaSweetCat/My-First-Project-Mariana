@@ -1,4 +1,6 @@
-﻿try
+﻿// Mariana Alejandra López Rodríguez 2026-0911
+
+try
 {
     List<decimal> typedNumbers = new List<decimal>();
     bool running = true;
