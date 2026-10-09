@@ -166,7 +166,7 @@ try
 
                                     decimal actualNumber;
 
-                                    while (!decimal.TryParse(Console.ReadLine()!, out actualNumber) || actualNumber == 0)
+                                    while (!decimal.TryParse(Console.ReadLine()!, out actualNumber) || (i > 1 && actualNumber == 0))
                                     {
                                         Console.WriteLine("Invalid input. Try Again");
                                     }
@@ -230,7 +230,7 @@ try
 
                     decimal gradePointAverage = sumGrades / quantity;
 
-                    Console.WriteLine($"The Grade Point Average of the student is: {gradePointAverage}");
+                    Console.WriteLine($"The Grade Point Average of the student is: {gradePointAverage:F2}");
 
                     if (gradePointAverage >= 90)
                     {
@@ -260,8 +260,7 @@ try
                     while (answer != "yes" && answer != "no")
                     {
                         Console.WriteLine("Invalid input. Try Again");
-                        answer = Console.ReadLine()!;
-                        answer = answer.ToLower();
+                        answer = Console.ReadLine()!.ToLower();
                     }
 
                     if (answer == "yes")
