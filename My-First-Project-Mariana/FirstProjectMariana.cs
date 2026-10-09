@@ -25,6 +25,7 @@ try
         {
             case 1:
                 {
+                    // Calculator
                     Console.WriteLine("----CALCULATOR----");
                     Console.WriteLine("1. Addition");
                     Console.WriteLine("2. Subtraction");
@@ -43,7 +44,7 @@ try
                     {
                         case 1:
                             {
-
+                                // Addition
                                 typedNumbers.Clear();
 
                                 Console.WriteLine("How many numbers do you want to use?");
@@ -80,6 +81,7 @@ try
                             break;
                         case 2:
                             {
+                                // Subtraction
                                 typedNumbers.Clear();
 
                                 Console.WriteLine("How many numbers do you want to use?");
@@ -115,6 +117,7 @@ try
                             break;
                         case 3:
                             {
+                                // Multiplication
                                 typedNumbers.Clear();
 
                                 Console.WriteLine("How many numbers do you want to use?");
@@ -150,6 +153,7 @@ try
                             break;
                         case 4:
                             {
+                                // Division
                                 typedNumbers.Clear();
 
                                 Console.WriteLine("How many numbers do you want to use?");
@@ -196,6 +200,7 @@ try
 
             case 2:
                 {
+                    // Grades Validation
                     typedNumbers.Clear();
 
                     Console.WriteLine("How many grades do you want to enter?");
@@ -253,7 +258,8 @@ try
                 break;
 
             case 3:
-                {
+                {      
+                    // Exit 
                     Console.WriteLine("Are you sure you want to exit the program? (Yes or No)");
                     string answer = Console.ReadLine()!.ToLower();
 
